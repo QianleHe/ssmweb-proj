@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.project.ssm.dao.MemberDao;
 import com.project.ssm.entity.Member;
 import com.project.ssm.service.MemberService;
 
@@ -20,6 +21,9 @@ import com.project.ssm.service.MemberService;
 public class MemberController {
 	@Autowired
 	MemberService memberService;
+	
+	@Autowired
+	MemberDao memberDao;
 	
 	private static Logger log = LoggerFactory.getLogger(MemberController.class);
 	
@@ -32,13 +36,13 @@ public class MemberController {
 	public String login(Member member, HttpServletRequest request) {
 		
 
-		boolean loginType = memberService.login(member.getMemberName(), member.getPassword());
+		boolean loginType = memberService.login(member.getMemberEmail(), member.getPassword());
 		log.debug("-------The login type----");
 		log.debug(Boolean.toString(loginType));
 		//log.debug(member);
-		System.out.println(member);
 		if (loginType) {
-			request.setAttribute("Member", member);
+			Member newmember = memberDao.queryByEmail(member.getMemberEmail());
+			request.setAttribute("newmember", newmember);
 			return "success";
 		} else {
 			request.setAttribute("message", "Wrong usersname and password");

@@ -15,26 +15,23 @@ public class MemberServiceImpl implements MemberService {
 	@Autowired
 	MemberDao memberDao;
 	
-	public boolean login(String membername, @Param("password") String password) {
+	public boolean login(String memberemail, @Param("password") String password) {
 		
-		Member member = memberDao.queryByName(membername);
-		
-		if (member != null) {
-			if (member.getPassword().equals(password)) {
-				return true;
-			}
-		}
-		
-//		member = memberDao.queryByEmail(membername);
+//		Member member = memberDao.queryByName(membername);
 //		
 //		if (member != null) {
-//			if (member.getMemberEmail().equals(membername) && member.getPassword().equals(password)) {
-//				System.out.println(member.getMemberName());
-//				System.out.println(membername);
-//				membername = member.getMemberName();
+//			if (member.getPassword().equals(password)) {
 //				return true;
 //			}
 //		}
+		
+		Member member = memberDao.queryByEmail(memberemail);
+		
+		if (member != null) {
+			if (member.getMemberEmail().equals(memberemail) && member.getPassword().equals(password)) {
+				return true;
+			}
+		}
 		return false;
 	}
 

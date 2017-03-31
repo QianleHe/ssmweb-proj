@@ -20,7 +20,7 @@
 	  </tr>
 	  <tr>
 	      <td>UserName:</td>
-	      <td><input type="text" name="memberName">
+	      <td><input type="text" name="memberEmail">
 	      </td>
 	  </tr>
 	  <tr>

@@ -9,7 +9,7 @@
 <body>
 	Login Success!
 	<br>
-	Hello!${member.memberName}
+	Hello!${newmember.memberName}
 	<br>
 	<a href="/member">Return to login page</a>
 </body>
