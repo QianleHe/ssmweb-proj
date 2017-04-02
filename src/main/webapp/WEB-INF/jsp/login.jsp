@@ -30,12 +30,11 @@
 	  </tr>
 	  <tr>
 	    <td colspan="2">
-	      <input type="submit" name="submit" value="登录"/>
+	      <input type="submit" name="submit" value="Signin"/>
 	    </td>
-	
-	
 	  </tr>
 	  </table>
-</form>
+	  <a href="/member/register">Do not have account? Sign up</a>
+	</form>
 </body>
 </html>

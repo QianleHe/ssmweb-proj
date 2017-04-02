@@ -82,7 +82,7 @@ public class Member {
 	}
 	
 	public Member(String memberName, String memberEmail, int gender, int age, String password) {
-		this.memberId = new Date().getTime();
+		//this.memberId = new Date().getTime();
 		this.memberName = memberName;
 		this.memberEmail = memberEmail;
 		this.gender = gender;

@@ -1,5 +1,10 @@
 package com.project.ssm.dao;
 
+import java.util.Date;
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
 import com.project.ssm.entity.Member;
 
 public interface MemberDao {
@@ -33,5 +38,7 @@ public interface MemberDao {
 	 * addmember into database
 	 * 
 	 */
-	//int addMember(String membername, String memberEmail, int gender, int age);
+	int addMember(@Param("memberName") String memberName, @Param("memberEmail") String memberEmail, @Param("gender") int gender, @Param("age") int age, @Param("password") String password);
+	
+	List<Member> listAll();
 }

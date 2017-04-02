@@ -47,5 +47,22 @@
 			member_name = #{memberName}
 	</select>
 	
+	<insert id="addMember">
+		<!-- ignore 主键冲突，报错 -->
+		INSERT ignore INTO member (member_name, member_email, gender, age, password)
+		VALUES (#{memberName}, #{memberEmail}, #{gender}, #{age}, #{password})
+	</insert>
+	
+	<select id="listAll" resultType="Member">
+		SELECT
+			member_id,
+			member_name,
+			member_email,
+			gender,
+			age,
+			password
+		FROM
+			member
+	</select>
 	
 </mapper>
