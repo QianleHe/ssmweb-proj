@@ -2,6 +2,7 @@ package com.project.ssm.web;
 
 
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -10,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -46,11 +48,19 @@ public class MemberController {
 		if (loginType) {
 			Member newmember = memberDao.queryByEmail(member.getMemberEmail());
 			request.setAttribute("newmember", newmember);
-			return "success";
+			return "redirect:view/" + newmember.getMemberId();
 		} else {
 			request.setAttribute("message", "Wrong usersname and password");
 			return "error";
 		}
+	}
+	
+	@RequestMapping(value = "/view/{memberId}")
+	public String doSuccess(@PathVariable("memberId") Long memberId,
+			Map<String, Object> model) {
+			Member member = memberDao.queryById(memberId);
+			model.put("newmember",member);
+			return "success";
 	}
 	
 	@RequestMapping(value = "/register")
@@ -77,6 +87,11 @@ public class MemberController {
 		}
 	}
 	
+	/**
+	 * Show all member in the database
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping(value = "/showall")
 	public String showAll(HttpServletRequest request) {
 		List<Member> memberList = memberDao.listAll();

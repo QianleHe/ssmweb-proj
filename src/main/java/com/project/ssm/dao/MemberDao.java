@@ -40,5 +40,8 @@ public interface MemberDao {
 	 */
 	int addMember(@Param("memberName") String memberName, @Param("memberEmail") String memberEmail, @Param("gender") int gender, @Param("age") int age, @Param("password") String password);
 	
+	/**
+	 * @return
+	 */
 	List<Member> listAll();
 }
