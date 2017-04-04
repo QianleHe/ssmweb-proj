@@ -13,7 +13,7 @@
 	<br>
 	<br>
 	<br>
-	<form name="form1" action="/member/login.do" method="post" >
+	<form name="form1" action="/login.do" method="post" >
 	  <table width="300" border="1" align="center">
 	  <tr>
 	    <td colspan="2">Login window</td>
@@ -34,7 +34,7 @@
 	    </td>
 	  </tr>
 	  </table>
-	  <a href="/member/register">Do not have account? Sign up</a>
+	  <a href="/register">Do not have account? Sign up</a>
 	</form>
 </body>
 </html>

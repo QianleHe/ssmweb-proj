@@ -12,7 +12,7 @@
 			<br>
 			<br>
 			<br>
-			<form name="form1" action="/member/register/i.do" method="post" >
+			<form name="form1" action="/register/i.do" method="post" >
 				  <table width="300" border="1" align="center">
 				  <tr>
 				    <td colspan="2">Register</td>

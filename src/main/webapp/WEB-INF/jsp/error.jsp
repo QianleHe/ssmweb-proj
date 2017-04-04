@@ -11,6 +11,6 @@
 	Login error! You may input wrong username and password.
 	${message}
 	<br>
-	<a href="/member">Login Again</a>
+	<a href="/">Login Again</a>
 </body>
 </html>

@@ -11,6 +11,7 @@
 	<br>
 	Hello!${member.memberName}
 	<br>
-	<a href="/member">Return to login page</a>
+	<a href="/">Return to login page</a>
+	<%-- <a href = <%response.sendRedirect("success.jsp");%>>Personal Page</a> --%>
 </body>
 </html>
