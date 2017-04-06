@@ -7,6 +7,31 @@ public class Member {
 	 * The id of the member
 	 */
 	private long memberId;
+
+	/**
+	 * The name of the member
+	 */
+	private String memberName;
+
+	/**
+	 * The email address of the member
+	 */
+	private String memberEmail;
+
+	/**
+	 * The gender of the member(0 for male, 1 for female)
+	 */
+	private int gender;
+
+	/**
+	 * The age of the member
+	 */
+	private int age;
+	
+	/**
+	 * The password
+	 */
+	private String password;
 	
 	public long getMemberId() {
 		return memberId;
@@ -16,10 +41,6 @@ public class Member {
 		this.memberId = memberId;
 	}
 
-	/**
-	 * The name of the member
-	 */
-	private String memberName;
 
 	public String getMemberName() {
 		return memberName;
@@ -29,10 +50,6 @@ public class Member {
 		this.memberName = memberName;
 	}
 	
-	/**
-	 * The email address of the member
-	 */
-	private String memberEmail;
 
 	public String getMemberEmail() {
 		return memberEmail;
@@ -42,10 +59,6 @@ public class Member {
 		this.memberEmail = memberEmail;
 	}
 	
-	/**
-	 * The gender of the member(0 for male, 1 for female)
-	 */
-	private int gender;
 
 	public int getGender() {
 		return gender;
@@ -55,10 +68,6 @@ public class Member {
 		this.gender = gender;
 	}
 	
-	/**
-	 * The age of the member
-	 */
-	private int age;
 
 	public int getAge() {
 		return age;
@@ -68,7 +77,6 @@ public class Member {
 		this.age = age;
 	}
 	
-	private String password;
 	
 	public String getPassword() {
 		return password;

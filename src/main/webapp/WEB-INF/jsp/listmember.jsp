@@ -24,7 +24,7 @@
 				    <td>password</td>
 				  </tr>
 				
-				  <c:forEach var="m" items="${memberlist}">  
+				  <c:forEach var="m" items="${memberlist}"> 
 				  <tr>
 				      <td>${m.memberId}</td>
 				      <td>${m.memberName}</td>

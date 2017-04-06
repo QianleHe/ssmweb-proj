@@ -143,4 +143,13 @@ public class MemberController {
 		}
 		return "error";
 	}
+	
+	/**
+	 * mapping the url jump to member infomation
+	 * @return
+	 */
+	@RequestMapping(value = "/memberinfo")
+	public String memberinfo() {
+		return "memberinfo";
+	}
 }

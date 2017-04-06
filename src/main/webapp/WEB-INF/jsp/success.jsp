@@ -11,7 +11,8 @@
 	<br>
 	Hello!${newmember.memberName}
 	<br>
-	<a href = "/">Return to login page</a>
-	<a href = "/logout">Log out!</a>
+	<a href = "/memberinfo">Check my infomation</a><br>
+	<a href = "/">Return to login page</a><br>
+	<a href = "/logout">Log out!</a><br>
 </body>
 </html>
